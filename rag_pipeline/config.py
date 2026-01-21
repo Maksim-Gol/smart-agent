@@ -11,7 +11,7 @@ EMBEDDING_DIM = 1536
 LLM_MODEL = "gpt-4o-mini"
 
 # Dataset path
-DATASET_PATH = "smartbugs-curated"
+DATASET_PATH = "../smartbugs-curated"
 VULN_JSON_PATH = f"{DATASET_PATH}/vulnerabilities.json"
 
 # Vulnerability descriptions
