@@ -1,0 +1,46 @@
+[
+  {
+    "method": "MLP-small",
+    "architecture": "Linear(29->32)->ReLU->Linear(32->8)",
+    "hyperparameters": "Adam lr=1e-3, batch=16, epochs=30, seed=42",
+    "accuracy": 0.685,
+    "f1_weighted": 0.651,
+    "f1_macro": 0.416,
+    "train_time_s": 0.19,
+    "epochs": 30,
+    "batch": 16
+  },
+  {
+    "method": "MLP-deep",
+    "architecture": "29->64->32->8, ReLU, Dropout 0.3",
+    "hyperparameters": "Adam lr=1e-3, batch=16, epochs=30, seed=42",
+    "accuracy": 0.664,
+    "f1_weighted": 0.626,
+    "f1_macro": 0.379,
+    "train_time_s": 0.26,
+    "epochs": 30,
+    "batch": 16
+  },
+  {
+    "method": "MLP-bn",
+    "architecture": "29->64->32->8, BatchNorm, ReLU, Dropout 0.3",
+    "hyperparameters": "Adam lr=1e-3, batch=16, epochs=30, seed=42",
+    "accuracy": 0.678,
+    "f1_weighted": 0.642,
+    "f1_macro": 0.411,
+    "train_time_s": 0.38,
+    "epochs": 30,
+    "batch": 16
+  },
+  {
+    "method": "CharCNN-tiny",
+    "architecture": "Embed(128,8)->Conv1d(8->16,k=5)->Pool->Conv1d(16->16,k=5)->GAP->Linear(16->C)",
+    "hyperparameters": "Adam lr=1e-3, batch=16, epochs=15, seed=42",
+    "accuracy": 0.364,
+    "f1_weighted": 0.194,
+    "f1_macro": 0.067,
+    "train_time_s": 12.59,
+    "epochs": 15,
+    "batch": 16
+  }
+]
